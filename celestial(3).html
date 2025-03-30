@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --video-top: 34%; /* Меняй тут, например: 40%, 60%, 10px */
+            --video-left: 60%; /* Меняй тут, например: 30%, 70%, 20px */
+        }
+
+        /* Добавленный стиль для фона */
+        body {
+            background-image: url('https://cojo.ru/wp-content/uploads/2022/12/anime-na-chernom-fone-4.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lexend', sans-serif;
+            overflow: hidden; /* Убираем скроллинг */
+        }
+
+        /* Звезды на фоне */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: starMovement 3s infinite linear;
+        }
+
+        @keyframes starMovement {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+            100% {
+                transform: translateY(500px) translateX(500px);
+            }
+        }
+
+        .video-container {
+            position: absolute;
+            top: var(--video-top);
+            left: var(--video-left);
+            transform: translate(-50%, -50%);
+            width: 24%;
+            max-width: 400px;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-background {
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(15px);
+            border-radius: 15px;
+            z-index: 0;
+        }
+
+        .video-position {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            z-index: 1;
+        }
+
+        header {
+            z-index: 10;
+        }
+        .div-header {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.623);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .h1-header {
+            color: white;
+            font-family: "Josefin Sans", sans-serif;
+            margin-right: 800px;
+        }
+        .a-header {
+            font-size: 22px;
+            color: white;
+            font-family: "Anton", sans-serif;
+            transition: color 0.3s ease;
+        }
+        .a-header:hover {
+            color: #a7a7a7;
+        }
+        .a-header:not(:last-child) {
+            margin-right: 20px;
+        }
+        .button-header {
+            width: 154px;
+            height: 45px;
+            background: linear-gradient(330deg, #9929ea 0%, #5808fb 100%);
+            box-shadow: 0 4px 10px rgba(0, 87, 255, 0.5);
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            font-family: "Anton", sans-serif;
+        }
+        .button-header:hover {
+            background: linear-gradient(330deg, #7b23f0 0%, #4a08d7 100%);
+            cursor: pointer;
+        }
+
+        /* Основной блок с текстом */
+        .div-main {
+            width: 100%;
+        }
+
+        .o-nas {
+            width: 520px;
+            background-color: rgba(0, 0, 0, 0.623);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-left: 1000px;
+            margin-top: 300px;
+        }
+
+        .h1-main {
+            font-size: 38px;
+            color: white;
+            font-family: "Anton", sans-serif;
+        }
+
+        .p-main {
+            font-size: 24px;
+            color: white;
+            font-family: "Anton", sans-serif;
+            margin-top: 20px;
+        }
+
+        .button-main {
+            width: 134px;
+            height: 45px;
+            background: linear-gradient(330deg, #9929ea 0%, #5808fb 100%);
+            box-shadow: 0 4px 10px rgba(0, 87, 255, 0.5);
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            font-family: "Anton", sans-serif;
+            margin-top: 20px;
+        }
+
+        .button-main:hover {
+            background: linear-gradient(330deg, #7b23f0 0%, #4a08d7 100%);
+            cursor: pointer;
+        }
+
+        .button-main:not(:last-child) {
+            margin-right: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- Эффект с летящими звездами -->
+    <div class="star" style="top: 10%; left: 50%;"></div>
+    <div class="star" style="top: 20%; left: 70%;"></div>
+    <div class="star" style="top: 30%; left: 30%;"></div>
+    <div class="star" style="top: 50%; left: 80%;"></div>
+    <div class="star" style="top: 70%; left: 60%;"></div>
+
+    <header>
+        <div class="div-header">
+            <h1 class="h1-header">CELESTIAL 1.16.5</h1>
+            <a class="a-header" href="">Поддержка</a>
+            <a class="a-header" href="">Купить</a>
+            <button class="button-header">Авторизация</button>
+        </div>
+    </header>
+    <main>
+        <div class="div-main">
+            <div class="o-nas">
+                <h1 class="h1-main">О нас</h1>
+                <p class="p-main">Мы предоставляем вам лучший клиент для комфортной игры, который даст вам наилучшие впечатления от игры.</p>
+                <div class="buttons-main">
+                    <button class="button-main" onclick="window.location.href='buy.html';">Купить</button>
+                    <button id="button-main2" class="button-main">Подробнее</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Контейнер с видео и блюром -->
+        <div class="video-container">
+            <div class="video-background"></div> 
+            <video controls class="video-position">
+                <source src="mak1.mp4" type="video/mp4">
+                Ваш браузер не поддерживает элемент video.
+            </video>
+        </div>
+    </main>
+    <audio id="clickSound">
+        <source src="intuition_enable.wav" type="audio/mpeg">
+        Ваш браузер не поддерживает элемент audio.
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
